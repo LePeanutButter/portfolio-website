@@ -766,7 +766,7 @@ export const projectCases: ProjectCase[] = [
     kind: "case-study",
     actionLabel: "View Ecosystem Case Study",
     dateRange: "January 2026 - May 2026",
-    thumbnail: "",
+    thumbnail: null,
     summary:
       "A multi-platform tourism system that unifies trip planning, AI recommendations, social collaboration, Android delivery, Spring Boot APIs, FastAPI intelligence, and AWS-oriented infrastructure.",
     narrative: [
@@ -888,7 +888,7 @@ export const projectCases: ProjectCase[] = [
     kind: "case-study",
     actionLabel: "Review Workflow Architecture",
     dateRange: "October 2025 - December 2025",
-    thumbnail: "",
+    thumbnail: null,
     summary:
       "A version-controlled n8n workflow system for multi-agent, human-in-the-loop grading automation across rubrics, submission processing, LLM evaluation, approval, feedback, and audit logging.",
     narrative: [
@@ -932,7 +932,7 @@ export const projectCases: ProjectCase[] = [
     kind: "case-study",
     actionLabel: "Explore Reservation Platform",
     dateRange: "February 2025 - April 2025",
-    thumbnail: "",
+    thumbnail: null,
     summary:
       "A full-stack university laboratory reservation platform with Spring Boot APIs, MongoDB Atlas, React dashboards, D3 analytics, JWT security, and Azure deployment.",
     narrative: [
@@ -986,7 +986,7 @@ export const projectCases: ProjectCase[] = [
     kind: "repository",
     actionLabel: "Inspect Database Design",
     dateRange: "February 2024 - May 2024",
-    thumbnail: "",
+    thumbnail: null,
     summary:
       "An Oracle SQL database system for a streaming-style movie and series distribution platform, with normalized schemas, CRUD components, triggers, indexes, views, security roles, and validation tests.",
     narrative: [
@@ -1151,7 +1151,7 @@ export const projectCases: ProjectCase[] = [
     kind: "case-study",
     actionLabel: "View Smart Gym Case Study",
     dateRange: "April 2025 - May 2025",
-    thumbnail: "",
+    thumbnail: null,
     summary:
       "A smart gym platform with Next.js experiences, Spring Boot APIs, PostgreSQL, JWT security, progress dashboards, session booking, routines, reporting, and AI-assisted training flows.",
     narrative: [
@@ -1206,7 +1206,7 @@ export const projectCases: ProjectCase[] = [
     kind: "case-study",
     actionLabel: "Explore AI Matching System",
     dateRange: "August 2025 - December 2025",
-    thumbnail: "",
+    thumbnail: null,
     summary:
       "Ethical recruitment MVP using Django, DistilBERT, semantic similarity, anonymization, and explainability to match resumes with vacancies beyond keyword filters.",
     narrative: [
@@ -1246,7 +1246,7 @@ export const projectCases: ProjectCase[] = [
     category: "personal",
     kind: "case-study",
     actionLabel: "Inspect DSL Implementation",
-    thumbnail: "",
+    thumbnail: null,
     summary:
       "A TypeScript DSL IDE for defining, validating, visualizing, importing, and exporting ISO 25010 quality attribute scenarios.",
     narrative: [

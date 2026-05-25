@@ -1,4 +1,5 @@
 import { navigationItems, siteConfig } from "@/src/config/site";
+import Link from 'next/link';
 
 export default function Header() {
   return (
@@ -12,14 +13,9 @@ export default function Header() {
         </a>
         <ul className="hidden gap-10 md:flex">
           {navigationItems.map((item) => (
-            <li key={item.href}>
-              <a
-                className="text-sm text-ink-secondary transition-colors duration-500 ease-premium hover:text-ink"
-                href={item.href}
-              >
+            <Link key={item.href} href={item.href} className="text-sm text-ink-secondary transition-colors duration-500 ease-premium hover:text-ink">
                 {item.label}
-              </a>
-            </li>
+            </Link>
           ))}
         </ul>
       </nav>

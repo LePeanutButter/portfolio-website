@@ -44,13 +44,13 @@ export const certificates: Certificate[] = [
     media: [
       {
         type: "pdf",
-        url: "/certificates/pdfs/toefl-junior-certificate.pdf",
+        url: '/portfolio-website/certificates/pdfs/toefl-junior-certificate.pdf',
         title: "TOEFL Junior Certificate",
         description: "TOEFL Junior Certificate with an overall score of 880/900 (B2 level). Demonstrated strong proficiency in English with scores of 290 in Listening, 300 in Language Form and Meaning, and 290 in Reading."
       },
       {
         type: "pdf",
-        url: "/certificates/pdfs/toefl-official-score-report.pdf",
+        url: '/portfolio-website/certificates/pdfs/toefl-official-score-report.pdf',
         title: "TOEFL Official Score Report",
         description: "Official TOEFL Junior score report, showcasing a total score of 880/900. Breakdown includes: Listening 290, Language Form and Meaning 300, and Reading 290, confirming solid English language skills at the B2 proficiency level."
       }
@@ -66,7 +66,7 @@ export const certificates: Certificate[] = [
     media: [
       {
         type: "pdf",
-        url: "/certificates/pdfs/oxford-placement-test-results.pdf",
+        url: '/portfolio-website/certificates/pdfs/oxford-placement-test-results.pdf',
         title: "Oxford Placement Test Assessment Results",
         description: 'Achieved a weighted score of 96 out of 120 in the Oxford Placement Test, placing at the CEFR C1 level. Scored 99 in the "Use of English" section and 94 in the "Listening" section, demonstrating advanced proficiency in both grammar and listening comprehension.'
       }
@@ -146,7 +146,7 @@ export const certificates: Certificate[] = [
     media: [
       {
         type: "pdf",
-        url: "/certificates/pdfs/zeugnis-b1.1.pdf",
+        url: '/portfolio-website/certificates/pdfs/zeugnis-b1.1.pdf',
         title: "Sprach Institut Assessment Results",
         description: "Obtained an overall final grade of 3.7 on the German language scale (1.0 - 5.0 passing scale). Demonstrated well-rounded language skills with individual section scores of 3.2 in Writing, 3.4 in Listening, 3.7 in Reading Comprehension, and 4.3 in Oral Expression/Speaking."
       }

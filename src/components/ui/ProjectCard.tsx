@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ProjectCase } from "@/src/types";
+import Image from 'next/image';
 
 interface ProjectCardProps {
   project: ProjectCase;
@@ -22,10 +23,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     >
       {/* Project Image Preview Area */}
       <div className="relative w-full aspect-[16/11] overflow-hidden border-b border-border-subtle bg-canvas">
-        <img 
+        <Image
           src={ project.thumbnail || `https://placehold.co/800x550/e5e7eb/6b7280?text=${encodeURIComponent(project.title)}`} 
           alt={`${project.title} preview`} 
           className="h-full w-full object-cover transition-transform duration-500 ease-premium group-hover:scale-105"
+          fill
         />
       </div>
 

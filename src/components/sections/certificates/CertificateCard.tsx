@@ -1,6 +1,5 @@
-"use client";
-
 import type { Certificate } from "@/src/types";
+import Image from 'next/image';
 
 interface CertificateCardProps {
   certificate: Certificate;
@@ -16,10 +15,12 @@ export default function CertificateCard({ certificate, onClick }: CertificateCar
       <div>
         <div className="flex items-center justify-between gap-4 mb-3.5">
           <span className="flex items-center gap-1.5 font-mono text-[11px] font-bold tracking-wider uppercase text-ink">
-            <img 
+            <Image
               src={ certificate.logoUrl || `https://placehold.co/40x40/e5e7eb/6b7280?text=${encodeURIComponent(certificate.issuer.charAt(0))}`}
               alt={`${certificate.issuer} logo`}
               className="w-4 h-4 rounded-sm object-contain"
+              width={16}
+              height={16}
             />
             <span className="text-border-subtle font-sans text-xs font-light">|</span>
             <span className="text-ink">{certificate.issuer}</span>

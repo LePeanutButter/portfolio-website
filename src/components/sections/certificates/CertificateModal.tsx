@@ -1,7 +1,6 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import type { Certificate } from "@/src/types";
+import Image from 'next/image';
 
 interface CertificateModalProps {
   certificate: Certificate;
@@ -55,10 +54,12 @@ export default function CertificateModal({
           </button>
           
           <div className="mb-6 flex items-center gap-2 font-mono text-sm tracking-wider uppercase text-ink">
-            <img 
+            <Image
               src={ certificate.logoUrl || `https://placehold.co/40x40/e5e7eb/6b7280?text=${encodeURIComponent(certificate.issuer.charAt(0))}`}
               alt={`${certificate.issuer} logo`}
               className="w-6 h-6 rounded-sm object-contain"
+              width={24}
+              height={24}
             />
             <span className="text-border-subtle font-sans font-light">|</span>
             <span className="font-semibold text-ink">{certificate.issuer}</span>
@@ -89,7 +90,7 @@ export default function CertificateModal({
                     <div className="flex items-center gap-4">
                       {item.type === "image" && (
                         <div className="hidden sm:flex h-16 w-24 shrink-0 items-center justify-center overflow-hidden rounded bg-surface border border-border-subtle">
-                          <img src={item.url} alt={item.title} className="h-full w-full object-cover" />
+                          <Image src={item.url} alt={item.title} className="h-full w-full object-cover" fill/>
                         </div>
                       )}
                       

@@ -1,4 +1,5 @@
 import { contactLinks } from "@/src/config/site";
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -9,14 +10,9 @@ export default function Footer() {
         </p>
         <ul className="flex gap-8">
           {contactLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                className="relative text-sm font-medium text-ink-secondary transition-colors duration-500 ease-premium after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-ink after:transition-transform after:duration-300 hover:text-ink hover:after:origin-bottom-left hover:after:scale-x-100"
-                href={link.href}
-              >
+            <Link key={link.href} href={link.href} className="relative text-sm font-medium text-ink-secondary transition-colors duration-500 ease-premium after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-ink after:transition-transform after:duration-300 hover:text-ink hover:after:origin-bottom-left hover:after:scale-x-100">
                 {link.label}
-              </a>
-            </li>
+            </Link>
           ))}
         </ul>
       </div>

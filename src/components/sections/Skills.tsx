@@ -1,4 +1,5 @@
 import { skillGroups } from "@/src/data/portfolio";
+import Image from 'next/image';
 import SectionHeading from "@/src/components/ui/SectionHeading";
 
 export default function Skills() {
@@ -41,10 +42,12 @@ export default function Skills() {
                     >
                       {/* PLACEHOLDER_IMAGE_SOURCE - Update src below when logos are ready */}
                       <div className="w-5 h-5 rounded-sm border border-border-subtle bg-canvas flex items-center justify-center shrink-0 overflow-hidden">
-                        <img 
+                        <Image
                           src={`https://placehold.co/20x20/e5e7eb/6b7280?text=${encodeURIComponent(item.substring(0, 2).toUpperCase())}`}
                           alt={`${item} logo`}
                           className="w-full h-full object-contain opacity-80 group-hover:scale-110 transition-transform"
+                          width={20}
+                          height={20}
                         />
                       </div>
                       <span className="text-border-subtle font-mono text-[0.66rem] select-none">|</span>

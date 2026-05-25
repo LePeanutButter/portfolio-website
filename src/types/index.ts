@@ -1,3 +1,5 @@
+import type { StaticImageData } from 'next/image';
+
 export type ProjectCategory = "academic" | "personal";
 
 export type ProjectStatus = "completed" | "in-progress" | "planned";
@@ -37,7 +39,7 @@ export interface Experience {
   mode?: "onsite" | "remote" | "hybrid";
   startDate: string;
   endDate: string;
-  logoUrl: string;
+  logoUrl: StaticImageData | null;
   summary: string;
   highlights: string[];
   source: string[];
@@ -49,7 +51,7 @@ export interface Education {
   location: string;
   startDate: string;
   endDate: string;
-  logoUrl: string;
+  logoUrl: StaticImageData | null;
   focusAreas: string[];
 }
 
@@ -86,7 +88,7 @@ export interface ProjectCase {
   kind: ProjectCaseKind;
   actionLabel: string;
   dateRange?: string;
-  thumbnail: string;
+  thumbnail: StaticImageData | null;
   summary: string;
   narrative: string[];
   technologies: string[];
@@ -142,7 +144,7 @@ export interface Certificate {
   issuer: string;
   issueDate: string;
   category: string;
-  logoUrl: string;
+  logoUrl: StaticImageData | null;
   licenseNumber?: string;
   media?: CertificateMedia[];
 }

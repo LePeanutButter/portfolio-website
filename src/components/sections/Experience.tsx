@@ -1,4 +1,5 @@
 import { experiences } from "@/src/data/portfolio";
+import Image from 'next/image';
 
 export default function Experience() {
   return (
@@ -29,10 +30,12 @@ export default function Experience() {
             <div className="rounded-card border border-border-subtle bg-surface p-6 shadow-premium transition-all duration-500 ease-premium group-hover:-translate-y-1 group-hover:shadow-premium-hover md:p-8">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                 <div className="flex items-center gap-4">
-                  <img
+                  <Image
                     src={ experience.logoUrl || `https://placehold.co/100x100/e5e7eb/6b7280?text=${encodeURIComponent(experience.company.charAt(0))}`}
                     alt={`${experience.company} logo`}
                     className="size-12 rounded bg-canvas object-fill shrink-0"
+                    width={48}
+                    height={48}
                   />
                   <div>
                     <h3 className="text-xl font-semibold leading-7 text-ink transition-opacity duration-500 ease-premium group-hover:opacity-70">
