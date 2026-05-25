@@ -19,7 +19,7 @@ export type SkillDomain =
 export interface ContactLink {
   label: string;
   href: string;
-  kind: "github" | "linkedin" | "portfolio" | "external";
+  kind: "github" | "linkedin" | "instagram" | "facebook" | "portfolio" | "external";
 }
 
 export interface Profile {
@@ -37,6 +37,7 @@ export interface Experience {
   mode?: "onsite" | "remote" | "hybrid";
   startDate: string;
   endDate: string;
+  logoUrl: string;
   summary: string;
   highlights: string[];
   source: string[];
@@ -48,6 +49,7 @@ export interface Education {
   location: string;
   startDate: string;
   endDate: string;
+  logoUrl: string;
   focusAreas: string[];
 }
 
@@ -84,6 +86,7 @@ export interface ProjectCase {
   kind: ProjectCaseKind;
   actionLabel: string;
   dateRange?: string;
+  thumbnail: string;
   summary: string;
   narrative: string[];
   technologies: string[];
@@ -124,4 +127,22 @@ export interface DesignTokenGuide {
     sans: string;
     mono: string;
   };
+}
+
+export interface CertificateMedia {
+  type: "image" | "pdf" | "link";
+  url: string;
+  title: string;
+  description: string;
+}
+
+export interface Certificate {
+  id?: string;
+  title: string;
+  issuer: string;
+  issueDate: string;
+  category: string;
+  logoUrl: string;
+  licenseNumber?: string;
+  media?: CertificateMedia[];
 }

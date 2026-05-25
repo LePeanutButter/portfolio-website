@@ -6,6 +6,19 @@ import { auxiliaryRepositories } from "@/src/data/portfolio";
 
 const INITIAL_REPOSITORY_LIMIT = 4;
 
+const getActionLabel = (title: string) => {
+  const lowercaseTitle = title.toLowerCase();
+  if (lowercaseTitle.includes("digital transformation")) return "Explore Enterprise Code";
+  if (lowercaseTitle.includes("computer science")) return "View Low-Level Code";
+  if (lowercaseTitle.includes("sysadmin")) return "View Configurations";
+  if (lowercaseTitle.includes("infosec")) return "Review Security Labs";
+  if (lowercaseTitle.includes("dsa") || lowercaseTitle.includes("structured data")) return "Examine Algorithms";
+  if (lowercaseTitle.includes("quantum")) return "Review Quantum Notebooks";
+  if (lowercaseTitle.includes("ecostream")) return "View Analytics Code";
+  if (lowercaseTitle.includes("n8n")) return "Examine Workflows";
+  return "Explore Repository";
+};
+
 export default function RepositoryEvidence() {
   const [isExpanded, setIsExpanded] = useState(false);
   const hasMoreRepositories =
@@ -23,14 +36,17 @@ export default function RepositoryEvidence() {
       />
       <div className="mt-12 grid gap-5 md:grid-cols-2">
         {visibleRepositories.map((repository) => (
-          <article
-            className="rounded-card border border-dashed border-border-subtle bg-transparent p-7 transition-all duration-500 ease-premium hover:-translate-y-1 hover:bg-surface hover:shadow-premium"
+          <a
+            href={repository.source}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block rounded-card border border-dashed border-border-subtle bg-transparent p-7 transition-all duration-500 ease-premium hover:-translate-y-1 hover:bg-surface hover:shadow-premium"
             key={repository.source}
           >
             <p className="font-mono text-xs text-ink-muted">
-              {repository.source}
+              {new URL(repository.source).pathname.substring(1)}
             </p>
-            <h3 className="mt-3 text-lg font-semibold text-ink">
+            <h3 className="mt-3 text-lg font-semibold text-ink transition-opacity duration-500 ease-premium group-hover:opacity-70">
               {repository.title}
             </h3>
             <p className="mt-3 text-sm leading-7 text-ink-secondary">
@@ -46,7 +62,10 @@ export default function RepositoryEvidence() {
                 </span>
               ))}
             </div>
-          </article>
+            <div className="mt-6 text-sm font-semibold text-ink transition-transform duration-500 ease-premium group-hover:translate-x-1">
+              {getActionLabel(repository.title)} -&gt;
+            </div>
+          </a>
         ))}
       </div>
       {hasMoreRepositories ? (

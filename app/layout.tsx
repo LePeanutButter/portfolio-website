@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Santiago Botero Garcia | Full-Stack Technologist",
+  title: "Santiago Botero Garcia | Engineering Modern Digital Systems | Software Architecture | Full-Stack & Cloud Development",
   description:
     "Portfolio of Santiago Botero Garcia, a Systems Engineering student focused on full-stack development, cloud architecture, AI automation, and human-centered software.",
 };

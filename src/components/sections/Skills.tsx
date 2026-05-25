@@ -1,63 +1,62 @@
-"use client";
-
-import { useState } from "react";
 import { skillGroups } from "@/src/data/portfolio";
 import SectionHeading from "@/src/components/ui/SectionHeading";
 
-const INITIAL_SKILL_GROUP_LIMIT = 4;
-
 export default function Skills() {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const hasMoreSkillGroups = skillGroups.length > INITIAL_SKILL_GROUP_LIMIT;
-  const visibleSkillGroups = isExpanded
-    ? skillGroups
-    : skillGroups.slice(0, INITIAL_SKILL_GROUP_LIMIT);
-  const hiddenCount = skillGroups.length - INITIAL_SKILL_GROUP_LIMIT;
-
   return (
     <section className="mx-auto max-w-content px-6 py-20 sm:px-8">
       <SectionHeading
         eyebrow="Capabilities"
         title="Technical Skills"
       />
-      <div className="mt-12 grid gap-5 md:grid-cols-2">
-        {visibleSkillGroups.map((group) => (
-          <article
-            className="rounded-card border border-border-subtle bg-surface p-7 shadow-premium transition-all duration-500 ease-premium hover:-translate-y-1 hover:shadow-premium-hover"
-            key={group.domain}
-          >
-            <h3 className="text-lg font-semibold text-ink">{group.title}</h3>
-            <p className="mt-3 text-sm leading-6 text-ink-secondary">
-              {group.description}
-            </p>
-            <div className="mt-5 flex flex-wrap gap-2">
-              {group.items.map((item) => (
-                <span
-                  className="rounded border border-border-subtle bg-canvas px-3 py-1 font-mono text-xs text-ink-muted"
-                  key={item}
+      <div className="mt-12 space-y-12 overflow-hidden">
+        {skillGroups.map((group, index) => {
+          // Double the items array to create the infinite scroll effect seamlessly
+          const marqueeItems = [...group.items, ...group.items, ...group.items, ...group.items];
+          const isReverse = index % 2 === 1;
+          
+          return (
+            <div key={group.domain}>
+              <p className="font-mono text-[10px] tracking-[0.14em] uppercase text-ink-muted mb-4 pb-3 border-b border-border-subtle">
+                {group.title}
+              </p>
+              
+              <div 
+                className="overflow-hidden py-2 relative w-full" 
+                style={{ 
+                  maskImage: 'linear-gradient(to right, transparent, #000 12%, #000 88%, transparent)',
+                  WebkitMaskImage: 'linear-gradient(to right, transparent, #000 12%, #000 88%, transparent)'
+                }}
+              >
+                <div 
+                  className={`flex flex-row items-center gap-3 w-max whitespace-nowrap hover:[animation-play-state:paused] animate-marquee-horizontal ${isReverse ? "[animation-direction:reverse]" : ""}`}
+                  style={{
+                    animationDuration: `${40 + (index % 3) * 5}s`
+                  }}
                 >
-                  {item}
-                </span>
-              ))}
+                  {marqueeItems.map((item, i) => (
+                    <div 
+                      key={`${item}-${i}`}
+                      aria-hidden={i >= group.items.length ? "true" : undefined}
+                      className="inline-flex items-center gap-2.5 px-3 py-1.5 border border-border-subtle bg-surface hover:bg-canvas hover:border-black/20 transition-all duration-300 rounded-sm hover:-translate-y-0.5 group cursor-default"
+                    >
+                      {/* PLACEHOLDER_IMAGE_SOURCE - Update src below when logos are ready */}
+                      <div className="w-5 h-5 rounded-sm border border-border-subtle bg-canvas flex items-center justify-center shrink-0 overflow-hidden">
+                        <img 
+                          src={`https://placehold.co/20x20/e5e7eb/6b7280?text=${encodeURIComponent(item.substring(0, 2).toUpperCase())}`}
+                          alt={`${item} logo`}
+                          className="w-full h-full object-contain opacity-80 group-hover:scale-110 transition-transform"
+                        />
+                      </div>
+                      <span className="text-border-subtle font-mono text-[0.66rem] select-none">|</span>
+                      <span className="font-mono text-xs tracking-wide text-ink-secondary group-hover:text-ink">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
-            <p className="mt-5 font-mono text-xs leading-6 text-ink-muted">
-              Evidence: {group.evidence.join(" / ")}
-            </p>
-          </article>
-        ))}
+          );
+        })}
       </div>
-      {hasMoreSkillGroups ? (
-        <div className="mt-10 flex justify-center">
-          <button
-            className="flex items-center gap-2 rounded-full border border-border-subtle bg-transparent px-6 py-3 text-sm font-semibold text-ink-secondary transition-all duration-500 ease-premium hover:border-black/30 hover:bg-black/[0.01] hover:text-ink"
-            onClick={() => setIsExpanded((currentState) => !currentState)}
-            type="button"
-          >
-            <span>{isExpanded ? "Show fewer skills" : `Show ${hiddenCount} more skills`}</span>
-            <span aria-hidden="true">{isExpanded ? "^" : "v"}</span>
-          </button>
-        </div>
-      ) : null}
     </section>
   );
 }

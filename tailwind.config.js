@@ -65,10 +65,15 @@ const config = {
           "0%, 100%": { opacity: "0" },
           "50%": { opacity: "1" },
         },
+        "marquee-horizontal": {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "fade-in-up": "fade-in-up 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         blink: "blink 1s infinite",
+        "marquee-horizontal": "marquee-horizontal 30s linear infinite",
       },
     },
   },

@@ -8,6 +8,8 @@ import type {
   SkillGroup,
 } from "@/src/types";
 import { contactLinks } from "@/src/config/site";
+import { CompanyTable } from "./companyTable";
+import { ProjectTable } from "./projectTable";
 
 export const profile: Profile = {
   name: "Santiago Botero Garcia",
@@ -20,12 +22,13 @@ export const profile: Profile = {
 
 export const experiences: Experience[] = [
   {
-    company: "Escuela Colombiana de Ingenieria Julio Garavito",
+    company: CompanyTable.eci.name,
     role: "Teaching Assistant - Object-Oriented Development",
     location: "Bogota, Colombia",
     mode: "onsite",
     startDate: "September 2025",
     endDate: "December 2025",
+    logoUrl: CompanyTable.eci.logo,
     summary:
       "Provided academic support for the Object-Oriented Development course through grading, feedback, and student support.",
     highlights: [
@@ -36,12 +39,13 @@ export const experiences: Experience[] = [
     source: ["santiago-botero-resume.md", "LinkedIn Positions.csv"],
   },
   {
-    company: "ORBIDI",
+    company: CompanyTable.orbidi.name,
     role: "Ad Hoc Front-End Web Developer",
     location: "Remote",
     mode: "remote",
     startDate: "February 2025",
     endDate: "March 2025",
+    logoUrl: CompanyTable.orbidi.logo,
     summary:
       "Implemented WordPress and Elementor pages from Figma designs for Kit Digital program client projects.",
     highlights: [
@@ -55,11 +59,12 @@ export const experiences: Experience[] = [
 
 export const education: Education[] = [
   {
-    institution: "Escuela Colombiana de Ingenieria Julio Garavito",
+    institution: CompanyTable.eci.name,
     degree: "Bachelor of Systems Engineering",
     location: "Bogota, Colombia",
     startDate: "August 2022",
     endDate: "December 2026 expected",
+    logoUrl: CompanyTable.eci.logo,
     focusAreas: [
       "Software engineering",
       "Data analysis",
@@ -761,6 +766,7 @@ export const projectCases: ProjectCase[] = [
     kind: "case-study",
     actionLabel: "View Ecosystem Case Study",
     dateRange: "January 2026 - May 2026",
+    thumbnail: "",
     summary:
       "A multi-platform tourism system that unifies trip planning, AI recommendations, social collaboration, Android delivery, Spring Boot APIs, FastAPI intelligence, and AWS-oriented infrastructure.",
     narrative: [
@@ -882,6 +888,7 @@ export const projectCases: ProjectCase[] = [
     kind: "case-study",
     actionLabel: "Review Workflow Architecture",
     dateRange: "October 2025 - December 2025",
+    thumbnail: "",
     summary:
       "A version-controlled n8n workflow system for multi-agent, human-in-the-loop grading automation across rubrics, submission processing, LLM evaluation, approval, feedback, and audit logging.",
     narrative: [
@@ -925,6 +932,7 @@ export const projectCases: ProjectCase[] = [
     kind: "case-study",
     actionLabel: "Explore Reservation Platform",
     dateRange: "February 2025 - April 2025",
+    thumbnail: "",
     summary:
       "A full-stack university laboratory reservation platform with Spring Boot APIs, MongoDB Atlas, React dashboards, D3 analytics, JWT security, and Azure deployment.",
     narrative: [
@@ -978,6 +986,7 @@ export const projectCases: ProjectCase[] = [
     kind: "repository",
     actionLabel: "Inspect Database Design",
     dateRange: "February 2024 - May 2024",
+    thumbnail: "",
     summary:
       "An Oracle SQL database system for a streaming-style movie and series distribution platform, with normalized schemas, CRUD components, triggers, indexes, views, security roles, and validation tests.",
     narrative: [
@@ -1014,11 +1023,12 @@ export const projectCases: ProjectCase[] = [
   },
   {
     slug: "poob-vs-zombies",
-    title: "POOB vs. Zombies",
+    title: ProjectTable.poob.name,
     category: "academic",
     kind: "repository",
     actionLabel: "Inspect Game Architecture",
     dateRange: "November 2024 - December 2024",
+    thumbnail: ProjectTable.poob.thumbnail,
     summary:
       "A Java object-oriented game inspired by Plants vs. Zombies, with versus, survival, and autonomous trials modes implemented through domain/presentation separation, custom assets, persistence, and JUnit tests.",
     narrative: [
@@ -1055,11 +1065,12 @@ export const projectCases: ProjectCase[] = [
   },
   {
     slug: "power-garden",
-    title: "Power Garden: Juicy Brawl!",
+    title: ProjectTable.arsw.name,
     category: "academic",
     kind: "case-study",
     actionLabel: "Inspect Cloud Game Architecture",
     dateRange: "August 2025 - December 2025",
+    thumbnail: ProjectTable.arsw.thumbnail,
     summary:
       "A browser-first multiplayer game platform combining Unity WebGL gameplay, SvelteKit orchestration, ASP.NET Core APIs, MongoDB persistence, Docker, Terraform, and Azure infrastructure.",
     narrative: [
@@ -1140,6 +1151,7 @@ export const projectCases: ProjectCase[] = [
     kind: "case-study",
     actionLabel: "View Smart Gym Case Study",
     dateRange: "April 2025 - May 2025",
+    thumbnail: "",
     summary:
       "A smart gym platform with Next.js experiences, Spring Boot APIs, PostgreSQL, JWT security, progress dashboards, session booking, routines, reporting, and AI-assisted training flows.",
     narrative: [
@@ -1194,6 +1206,7 @@ export const projectCases: ProjectCase[] = [
     kind: "case-study",
     actionLabel: "Explore AI Matching System",
     dateRange: "August 2025 - December 2025",
+    thumbnail: "",
     summary:
       "Ethical recruitment MVP using Django, DistilBERT, semantic similarity, anonymization, and explainability to match resumes with vacancies beyond keyword filters.",
     narrative: [
@@ -1233,6 +1246,7 @@ export const projectCases: ProjectCase[] = [
     category: "personal",
     kind: "case-study",
     actionLabel: "Inspect DSL Implementation",
+    thumbnail: "",
     summary:
       "A TypeScript DSL IDE for defining, validating, visualizing, importing, and exporting ISO 25010 quality attribute scenarios.",
     narrative: [

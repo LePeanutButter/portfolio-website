@@ -27,7 +27,7 @@ export default function CodeCard({ filename }: CodeCardProps) {
           {"\n"}
           {"  "}role:{" "}
           <span className="text-syntax-string">
-            &quot;Full-Stack Technologist&quot;
+            &quot;Engineering Modern Digital Systems | Software Architecture | Full-Stack & Cloud Development&quot;
           </span>
           ,{"\n"}
           {"  "}philosophy: [
