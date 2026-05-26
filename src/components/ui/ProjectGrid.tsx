@@ -16,9 +16,29 @@ export default function ProjectGrid({
   initialLimit = 6,
 }: ProjectGridProps) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const hasMoreProjects = projects.length > initialLimit;
-  const visibleProjects = isExpanded ? projects : projects.slice(0, initialLimit);
-  const hiddenCount = projects.length - initialLimit;
+
+  // Helper function to parse date range (e.g., "August 2025 - December 2025")
+  const getEndDate = (dateRange?: string) => {
+    if (!dateRange) return new Date(0);
+    const parts = dateRange.split("-");
+    const endStr = parts[parts.length - 1].trim();
+    const date = new Date(endStr);
+    return isNaN(date.getTime()) ? new Date(0) : date;
+  };
+
+  const sortedProjects = [...projects].sort((a, b) => {
+    const dateA = getEndDate(a.dateRange);
+    const dateB = getEndDate(b.dateRange);
+    if (dateA.getTime() !== dateB.getTime()) {
+      return dateB.getTime() - dateA.getTime(); // Most recent first
+    }
+    // Alphabetical fallback
+    return a.title.localeCompare(b.title);
+  });
+
+  const hasMoreProjects = sortedProjects.length > initialLimit;
+  const visibleProjects = isExpanded ? sortedProjects : sortedProjects.slice(0, initialLimit);
+  const hiddenCount = sortedProjects.length - initialLimit;
 
   return (
     <div>

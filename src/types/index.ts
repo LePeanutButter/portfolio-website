@@ -88,6 +88,8 @@ export interface ProjectCase {
   kind: ProjectCaseKind;
   actionLabel: string;
   dateRange?: string;
+  /** Relative path under /media/ (e.g. "smartrip/logo.png") when no StaticImageData thumbnail. */
+  coverImage?: string;
   thumbnail: StaticImageData | null;
   summary: string;
   narrative: string[];

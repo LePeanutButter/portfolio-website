@@ -1,6 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { ProjectCase } from "@/src/types";
-import Image from 'next/image';
+import { mediaUrl } from "@/src/lib/assets";
 
 interface ProjectCardProps {
   project: ProjectCase;
@@ -16,18 +17,24 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         ? "Editorial Lab"
         : "GitHub Repo";
 
+  const previewSrc = project.thumbnail
+    ? project.thumbnail
+    : project.coverImage
+      ? mediaUrl(project.coverImage)
+      : `https://placehold.co/800x550/e5e7eb/6b7280?text=${encodeURIComponent(project.title)}`;
+
   return (
     <Link
-      className="group flex min-h-[360px] flex-col overflow-hidden rounded-[20px] border border-border-subtle bg-surface text-inherit no-underline shadow-premium transition-all duration-500 ease-premium hover:-translate-y-1 hover:border-black/15 hover:shadow-premium-hover"
+      className="group flex min-h-[360px] flex-col overflow-hidden rounded-[20px] border border-border-subtle bg-surface text-inherit no-underline shadow-premium transition-all duration-500 ease-premium hover:-translate-y-1 hover:border-black/15 hover:shadow-premium-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
       href={`/projects/${project.slug}`}
     >
-      {/* Project Image Preview Area */}
-      <div className="relative w-full aspect-[16/11] overflow-hidden border-b border-border-subtle bg-canvas">
+      <div className="relative aspect-[16/11] w-full overflow-hidden border-b border-border-subtle bg-canvas">
         <Image
-          src={ project.thumbnail || `https://placehold.co/800x550/e5e7eb/6b7280?text=${encodeURIComponent(project.title)}`} 
-          alt={`${project.title} preview`} 
+          src={previewSrc}
+          alt={`${project.title} preview`}
           className="h-full w-full object-cover transition-transform duration-500 ease-premium group-hover:scale-105"
           fill
+          unoptimized={!project.thumbnail}
         />
       </div>
 

@@ -266,7 +266,7 @@ export const academicProjects: Project[] = [
     title: "Olympus - Prometeo Frontend",
     category: "academic",
     status: "completed",
-    path: "https://github.com/DASarria/Olympus",
+    path: "https://github.com/DASarria/Olympus/tree/develop",
     dateRange: "April 2025 - May 2025",
     summary:
       "Next.js frontend for the Prometeo smart gym platform, supporting booking flows, progress dashboards, AI routine experiences, and interactive exercise exploration.",
@@ -761,12 +761,12 @@ export const allProjects: Project[] = [...academicProjects, ...personalProjects]
 export const projectCases: ProjectCase[] = [
   {
     slug: "smartrip",
-    title: "SmarTrip - AI-Powered Multi-Platform Tourism Ecosystem",
+    title: ProjectTable.smartrip.name,
     category: "academic",
     kind: "case-study",
     actionLabel: "View Ecosystem Case Study",
     dateRange: "January 2026 - May 2026",
-    thumbnail: null,
+    thumbnail: ProjectTable.smartrip.thumbnail,
     summary:
       "A multi-platform tourism system that unifies trip planning, AI recommendations, social collaboration, Android delivery, Spring Boot APIs, FastAPI intelligence, and AWS-oriented infrastructure.",
     narrative: [
@@ -883,12 +883,12 @@ export const projectCases: ProjectCase[] = [
   },
   {
     slug: "ai-grading-automation-workflows-backup",
-    title: "AI Grading Automation Workflows Backup",
+    title: ProjectTable.haut.name,
     category: "academic",
     kind: "case-study",
     actionLabel: "Review Workflow Architecture",
     dateRange: "October 2025 - December 2025",
-    thumbnail: null,
+    thumbnail: ProjectTable.haut.thumbnail,
     summary:
       "A version-controlled n8n workflow system for multi-agent, human-in-the-loop grading automation across rubrics, submission processing, LLM evaluation, approval, feedback, and audit logging.",
     narrative: [
@@ -927,12 +927,12 @@ export const projectCases: ProjectCase[] = [
   },
   {
     slug: "elysium",
-    title: "Elysium - Laboratory Reservation System",
+    title: ProjectTable.elysium.name,
     category: "academic",
     kind: "case-study",
     actionLabel: "Explore Reservation Platform",
     dateRange: "February 2025 - April 2025",
-    thumbnail: null,
+    thumbnail: ProjectTable.elysium.thumbnail,
     summary:
       "A full-stack university laboratory reservation platform with Spring Boot APIs, MongoDB Atlas, React dashboards, D3 analytics, JWT security, and Azure deployment.",
     narrative: [
@@ -981,12 +981,12 @@ export const projectCases: ProjectCase[] = [
   },
   {
     slug: "ezflix-relational-db",
-    title: "EZFlix - Relational Database System",
+    title: ProjectTable.ezflix.name,
     category: "academic",
     kind: "repository",
     actionLabel: "Inspect Database Design",
     dateRange: "February 2024 - May 2024",
-    thumbnail: null,
+    thumbnail: ProjectTable.ezflix.thumbnail,
     summary:
       "An Oracle SQL database system for a streaming-style movie and series distribution platform, with normalized schemas, CRUD components, triggers, indexes, views, security roles, and validation tests.",
     narrative: [
@@ -1070,6 +1070,7 @@ export const projectCases: ProjectCase[] = [
     kind: "case-study",
     actionLabel: "Inspect Cloud Game Architecture",
     dateRange: "August 2025 - December 2025",
+    coverImage: "power-garden/gameplay.jpeg",
     thumbnail: ProjectTable.arsw.thumbnail,
     summary:
       "A browser-first multiplayer game platform combining Unity WebGL gameplay, SvelteKit orchestration, ASP.NET Core APIs, MongoDB persistence, Docker, Terraform, and Azure infrastructure.",
@@ -1146,12 +1147,13 @@ export const projectCases: ProjectCase[] = [
   },
   {
     slug: "prometeo",
-    title: "Prometeo - Smart Gym Management System",
+    title: ProjectTable.prometeo.name,
     category: "academic",
     kind: "case-study",
     actionLabel: "View Smart Gym Case Study",
     dateRange: "April 2025 - May 2025",
-    thumbnail: null,
+    coverImage: "prometeo/gym.jpg",
+    thumbnail: ProjectTable.prometeo.thumbnail,
     summary:
       "A smart gym platform with Next.js experiences, Spring Boot APIs, PostgreSQL, JWT security, progress dashboards, session booking, routines, reporting, and AI-assisted training flows.",
     narrative: [
@@ -1168,7 +1170,7 @@ export const projectCases: ProjectCase[] = [
       {
         name: "Olympus",
         role: "Frontend",
-        repositoryUrl: "https://github.com/DASarria/Olympus",
+        repositoryUrl: "https://github.com/DASarria/Olympus/tree/develop",
         localPath: "projects/academic/prometeo/Olympus",
         summary:
           "Next.js frontend with gym reservations, routines, progress, reports, health module, user management, and reusable gym UI components.",
@@ -1201,12 +1203,12 @@ export const projectCases: ProjectCase[] = [
   },
   {
     slug: "talent-map-ai",
-    title: "TalentMap AI",
+    title: ProjectTable.talentmap.name,
     category: "academic",
     kind: "case-study",
     actionLabel: "Explore AI Matching System",
     dateRange: "August 2025 - December 2025",
-    thumbnail: null,
+    thumbnail: ProjectTable.talentmap.thumbnail,
     summary:
       "Ethical recruitment MVP using Django, DistilBERT, semantic similarity, anonymization, and explainability to match resumes with vacancies beyond keyword filters.",
     narrative: [
@@ -1242,11 +1244,11 @@ export const projectCases: ProjectCase[] = [
   },
   {
     slug: "qify",
-    title: "Qify - Quality Attribute DSL",
+    title: ProjectTable.qify.name,
     category: "personal",
     kind: "case-study",
     actionLabel: "Inspect DSL Implementation",
-    thumbnail: null,
+    thumbnail: ProjectTable.qify.thumbnail,
     summary:
       "A TypeScript DSL IDE for defining, validating, visualizing, importing, and exporting ISO 25010 quality attribute scenarios.",
     narrative: [

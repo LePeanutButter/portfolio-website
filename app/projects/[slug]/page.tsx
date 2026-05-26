@@ -3,6 +3,7 @@ import Footer from "@/src/components/layout/Footer";
 import Header from "@/src/components/layout/Header";
 import PageShell from "@/src/components/layout/PageShell";
 import ProjectDetailPage from "@/src/components/projects/ProjectDetailPage";
+import ProjectSiteTheme from "@/src/components/projects/shared/ProjectSiteTheme";
 import { projectCases } from "@/src/data/portfolio";
 
 interface ProjectRouteProps {
@@ -43,6 +44,7 @@ export default async function ProjectPage({ params }: ProjectRouteProps) {
 
   return (
     <PageShell>
+      {slug === "qify" ? <ProjectSiteTheme theme="qify" /> : null}
       <Header />
       <ProjectDetailPage project={project} />
       <Footer />
