@@ -4,9 +4,14 @@ import Image from "next/image";
 import { useCallback, useRef } from "react";
 import TechBadge from "@/src/components/projects/shared/TechBadge";
 import { projectUi } from "@/src/components/projects/shared/projectUi";
-import type { ProjectViewProps } from "@/src/types/projectViews";
+import type { ProjectViewProps, Contributor } from "@/src/types/projectViews";
 import ProjectRepositoriesBlock from "@/src/components/projects/shared/ProjectRepositoriesBlock";
 import { mediaUrl } from "@/src/lib/assets";
+
+const collaborators: Contributor[] = [
+  { name: "Laura Perilla", role: "Lanapequin — Software Eng.", href: "https://github.com/Lanapequin", avatarSrc: "https://github.com/Lanapequin.png" },
+  { name: "Santiago Botero", role: "LePeanutButter — Software Eng.", href: "https://github.com/LePeanutButter", avatarSrc: "https://github.com/LePeanutButter.png" },
+];
 
 type ScreenshotItem =
   | { kind: "image"; src: string; title: string; desc: string }
@@ -180,6 +185,24 @@ const onPointerDown = useCallback((e: React.PointerEvent<HTMLDivElement>) => {
             </section>
           </aside>
         </div>
+        <footer className={`mt-12 ${projectUi.divider} pt-8`}>
+          <p className={`text-center ${projectUi.sectionEyebrow}`}>Engineering, Design & Development Team</p>
+          <div className="mt-6 flex flex-wrap justify-center gap-4">
+            {collaborators.map((c) => (
+              <a key={c.name} href={c.href} target="_blank" rel="noreferrer" className={`flex items-center gap-3 ${projectUi.card}`}>
+                {c.avatarSrc ? (
+                  <Image src={c.avatarSrc} alt={c.name} width={36} height={36} className="rounded-full flex-shrink-0" unoptimized />
+                ) : (
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full border border-border-subtle bg-canvas text-xs font-bold flex-shrink-0">◉</span>
+                )}
+                <div>
+                  <p className="text-sm font-semibold text-ink">{c.name}</p>
+                  <p className="text-xs text-ink-muted">{c.role}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </footer>
       </div>
     </div>
   );
