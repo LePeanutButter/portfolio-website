@@ -8,7 +8,9 @@ import PowerGarden from "./custom/PowerGarden";
 import Prometeo from "./custom/Prometeo";
 import Qify from "./custom/Qify";
 import Smartrip from "./custom/Smartrip";
+import SustainableWaterAwareness from "./custom/SustainableWaterAwareness";
 import TalentMapAi from "./custom/TalentMapAi";
+import AquaSense from "./custom/AquaSense";
 
 export type ProjectViewComponent = ComponentType<ProjectViewProps>;
 
@@ -22,6 +24,8 @@ export const projectViewRegistry: Record<string, ProjectViewComponent> = {
   prometeo: Prometeo,
   "talent-map-ai": TalentMapAi,
   qify: Qify,
+  "sustainable-water-awareness": SustainableWaterAwareness,
+  aquasense: AquaSense,
 };
 
 export function getProjectView(slug: string): ProjectViewComponent | undefined {

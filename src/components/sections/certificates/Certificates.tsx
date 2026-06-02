@@ -2,7 +2,7 @@
 
 import { useMemo, useState, useEffect } from "react";
 import SectionHeading from "@/src/components/ui/SectionHeading";
-import { certificates } from "@/src/data/certificates";
+import { certificates } from "@/src/data/portfolio";
 import CertificateCard from "./CertificateCard";
 import CertificateModal from "./CertificateModal";
 import type { Certificate } from "@/src/types";
@@ -34,7 +34,7 @@ export default function Certificates() {
     if (activeCategory !== "all") {
       filtered = certificates.filter((c) => c.category === activeCategory);
     }
-    
+
     return [...filtered].sort((a, b) => {
       const dateA = parseDate(a.issueDate);
       const dateB = parseDate(b.issueDate);
@@ -60,7 +60,7 @@ export default function Certificates() {
     <section id="certificates" className="mx-auto max-w-content px-6 py-20 sm:px-8">
       <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <SectionHeading eyebrow="Continuous Learning" title="Certifications" />
-        
+
         <div
           aria-label="Certificate category tabs"
           className="flex w-fit max-w-full overflow-x-auto rounded-control border border-border-subtle bg-surface p-1 shadow-premium no-scrollbar"
@@ -81,12 +81,12 @@ export default function Certificates() {
           ))}
         </div>
       </div>
-      
+
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:gap-8">
         {visibleCertificates.map((cert) => (
-          <CertificateCard 
-            key={cert.id} 
-            certificate={cert} 
+          <CertificateCard
+            key={cert.id}
+            certificate={cert}
             onClick={() => setSelectedCert(cert)}
           />
         ))}
@@ -110,9 +110,9 @@ export default function Certificates() {
       )}
 
       {selectedCert && (
-        <CertificateModal 
-          certificate={selectedCert} 
-          onClose={() => setSelectedCert(null)} 
+        <CertificateModal
+          certificate={selectedCert}
+          onClose={() => setSelectedCert(null)}
         />
       )}
     </section>

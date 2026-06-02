@@ -1,46 +1,58 @@
 import { Certificate } from "@/src/types";
-import { CompanyTable } from "./companyTable";
+import { CompanyRegistry } from "./companyRegistry";
 
 export const certificates: Certificate[] = [
   {
     id: "cert-1",
     title: "Certificate in Strategic Plan Development",
-    issuer: CompanyTable.crehana.name,
+    issuer: CompanyRegistry.crehana.name,
     issueDate: "Jul 2025",
     category: "Strategy & Management",
-    logoUrl: CompanyTable.crehana.logo,
+    logoUrl: CompanyRegistry.crehana.logo,
     media: [
       {
         type: "link",
         url: "https://s3.amazonaws.com/public-lessons.crehana.com/enrollment/attachment/08/07/2025/cert-santiago-botero-garcia-desarrollo-de-un-plan-estrategico-08-07-2025.pdf",
         title: "Credential Document",
         description: "Official certificate on Crehana"
+      },
+      {
+        type: "pdf",
+        url: "/portfolio-website/certificates/pdfs/cert-santiago-botero-garcia-desarrollo-de-un-plan-estrategico-08-07-2025.pdf",
+        title: "Strategic Plan Development Certificate",
+        description: "Advanced-level course focused on analyzing competitive landscapes and formulating high-impact business strategies. Acquired expertise in evaluating internal and external operational factors to identify growth opportunities. Developed specialized skills in setting SMART objectives, designing Key Performance Indicators (KPIs), and structuring short-term tactical actions to ensure effective monitoring and strategic coordination."
       }
     ]
   },
   {
     id: "cert-2",
     title: "Certificate in Implementation and Monitoring of Agile Product Development",
-    issuer:  CompanyTable.crehana.name,
+    issuer: CompanyRegistry.crehana.name,
     issueDate: "Jul 2025",
     category: "Agile & Projects",
-    logoUrl: CompanyTable.crehana.logo,
+    logoUrl: CompanyRegistry.crehana.logo,
     media: [
       {
         type: "link",
         url: "https://s3.amazonaws.com/public-lessons.crehana.com/enrollment/attachment/2025/07/09/implementacion-y-seguimiento-del-desarrollo-de-producto-agil-7946258-Certificado-Crehana.pdf",
         title: "Credential Document",
         description: "Official certificate on Crehana"
+      },
+      {
+        type: "pdf",
+        url: "/portfolio-website/certificates/pdfs/implementacion-y-seguimiento-del-desarrollo-de-producto-agil-7946258-Certificado-Crehana.pdf",
+        title: "Agile Product Management & Tracking Certificate",
+        description: "Credential certifying expertise in implementing and tracking agile product strategies. Developed hands-on skills in setting product OKRs, establishing development roadmaps, and running key Scrum events (Sprint Planning, Dailies, Reviews, and Retrospectives). Focused on optimization for organizational agility, continuous iteration, and aligning technical engineering delivery with business value."
       }
     ]
   },
   {
     id: "cert-3",
     title: "TOEFL Junior Certificate - CEFR B2 Profile",
-    issuer: CompanyTable.toefl.name,
+    issuer: CompanyRegistry.toefl.name,
     issueDate: "Nov 2020",
     category: "Languages",
-    logoUrl: CompanyTable.toefl.logo,
+    logoUrl: CompanyRegistry.toefl.logo,
     media: [
       {
         type: "pdf",
@@ -59,10 +71,10 @@ export const certificates: Certificate[] = [
   {
     id: "cert-4",
     title: "Oxford Placement Test - CEFR C1 Level Result",
-    issuer: CompanyTable.oxford.name,
+    issuer: CompanyRegistry.oxford.name,
     issueDate: "Oct 2022",
     category: "Languages",
-    logoUrl: CompanyTable.oxford.logo,
+    logoUrl: CompanyRegistry.oxford.logo,
     media: [
       {
         type: "pdf",
@@ -75,74 +87,98 @@ export const certificates: Certificate[] = [
   {
     id: "cert-5",
     title: "Certificate in Leadership with Strategic Vision",
-    issuer:  CompanyTable.crehana.name,
+    issuer: CompanyRegistry.crehana.name,
     issueDate: "Aug 2025",
     category: "Strategy & Management",
-    logoUrl: CompanyTable.crehana.logo,
+    logoUrl: CompanyRegistry.crehana.logo,
     media: [
       {
         type: "link",
         url: "https://s3.amazonaws.com/public-lessons.crehana.com/enrollment/attachment/25/08/2025/cert-santiago-botero-garcia-liderazgo-con-vision-estrategica-25-08-2025.pdf",
         title: "Credential Document",
         description: "Official certificate on Crehana"
+      },
+      {
+        type: "pdf",
+        url: '/portfolio-website/certificates/pdfs/cert-santiago-botero-garcia-liderazgo-con-vision-estrategica-25-08-2025.pdf',
+        title: "Leadership with Strategic Vision Certificate",
+        description: "Advanced-level course focused on driving business value and team alignment through strategic leadership. Developed high-level competencies in building and implementing Balanced Scorecards to connect leadership metrics with overall business objectives. Learned to master resource prioritization, conflict resolution, and strategic negotiation tools to foster adaptability and influence positive organizational change in complex environments."
       }
     ]
   },
   {
     id: "cert-6",
     title: "Certificate in Kanban for IT Project Management",
-    issuer:  CompanyTable.crehana.name,
+    issuer: CompanyRegistry.crehana.name,
     issueDate: "Aug 2025",
     category: "Agile & Projects",
-    logoUrl: CompanyTable.crehana.logo,
+    logoUrl: CompanyRegistry.crehana.logo,
     media: [
       {
         type: "link",
         url: "https://s3.amazonaws.com/public-lessons.crehana.com/enrollment/attachment/25/08/2025/cert-santiago-botero-garcia-kanban-para-la-gestion-de-proyectos-de-ti-25-08-2025.pdf",
         title: "Credential Document",
         description: "Official certificate on Crehana"
+      },
+      {
+        type: "pdf",
+        url: '/portfolio-website/certificates/pdfs/cert-santiago-botero-garcia-kanban-para-la-gestion-de-proyectos-de-ti-25-08-2025.pdf',
+        title: "IT Project Management with Kanban Certificate",
+        description: "Credential certifying expertise in leveraging the Kanban method for Information Technology projects. Developed competencies in visualizing system workflows, prioritizing technical backlogs, and implementing continuous improvement strategies. Focused on optimizing team collaboration, tracking high-impact agile metrics, and driving operational efficiency in fast-paced tech environments."
       }
     ]
   },
   {
     id: "cert-7",
     title: "Certificate in Agile Project Management with AI",
-    issuer:  CompanyTable.crehana.name,
+    issuer: CompanyRegistry.crehana.name,
     issueDate: "Aug 2025",
     category: "Agile & Projects",
-    logoUrl: CompanyTable.crehana.logo,
+    logoUrl: CompanyRegistry.crehana.logo,
     media: [
       {
         type: "link",
         url: "https://s3.amazonaws.com/public-lessons.crehana.com/enrollment/attachment/25/08/2025/cert-santiago-botero-garcia-gestion-agil-de-proyectos-con-ia-25-08-2025.pdf",
         title: "Credential Document",
         description: "Official certificate on Crehana"
+      },
+      {
+        type: "pdf",
+        url: '/portfolio-website/certificates/pdfs/cert-santiago-botero-garcia-gestion-agil-de-proyectos-con-ia-25-08-2025.pdf',
+        title: "Agile Project Management & AI Integration Specialist Certificate",
+        description: "Advanced learning path focused on driving project efficiency and team adaptability through data-driven frameworks. Developed comprehensive skills in Agile methodologies integrated with Artificial Intelligence tools. Specialized in leveraging AI algorithms and data analysis to optimize executive decision-making, eliminate process waste, and accelerate high-quality project delivery."
       }
     ]
   },
   {
     id: "cert-8",
     title: "Certificate in Corporate Vision and Strategy",
-    issuer:  CompanyTable.crehana.name,
+    issuer: CompanyRegistry.crehana.name,
     issueDate: "Aug 2025",
     category: "Strategy & Management",
-    logoUrl: CompanyTable.crehana.logo,
+    logoUrl: CompanyRegistry.crehana.logo,
     media: [
       {
         type: "link",
         url: "https://s3.amazonaws.com/public-lessons.crehana.com/enrollment/attachment/26/08/2025/cert-santiago-botero-garcia-vision-y-estrategia-corporativa-26-08-2025.pdf",
         title: "Credential Document",
         description: "Official certificate on Crehana"
+      },
+      {
+        type: "pdf",
+        url: '/portfolio-website/certificates/pdfs/cert-santiago-botero-garcia-vision-y-estrategia-corporativa-26-08-2025.pdf',
+        title: "Corporate Strategy and Vision Certificate",
+        description: "An advanced-level course focused on the analysis, design, execution, and control of winning business strategies. Developed high-level skills to bridge the gap between current and future organizational states, leveraging purpose-driven vision, transformational leadership, and agile culture as core growth engines. Covered strategic communication metrics, organizational alignment, and executive decision-making frameworks."
       }
     ]
   },
   {
     id: "cert-9",
     title: "Sprach Institut Certificate - CEFR B1.1 Proficiency",
-    issuer: CompanyTable.sprach.name,
+    issuer: CompanyRegistry.sprach.name,
     issueDate: "Aug 2025",
     category: "Languages",
-    logoUrl: CompanyTable.sprach.logo,
+    logoUrl: CompanyRegistry.sprach.logo,
     media: [
       {
         type: "pdf",

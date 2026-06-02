@@ -18,10 +18,10 @@ type ScreenshotItem =
   | { kind: "video"; poster: string; src: string; title: string; desc: string };
 
 const screenshots: ScreenshotItem[] = [
-  { kind: "image", src: "home-ui.jpg", title: "01. Home UI", desc: "Main menu and player profile routing system." },
-  { kind: "image", src: "survival-mode.jpg", title: "02. Versus Mode", desc: "Local asymmetric mechanics inspired by home video game consoles." },
-  { kind: "image", src: "versus-mode.jpg", title: "03. Survival Mode", desc: "Traditional gameplay loop featuring horde persistence and sun resource management." },
-  { kind: "video", poster: "trial-mode.jpg", src: "trial-mode.mp4", title: "04. Trials Mode (AI)", desc: "Real-time simulation powered by strategic autonomous agents." },
+  { kind: "image", src: "home-ui.webp", title: "01. Home UI", desc: "Main menu and player profile routing system." },
+  { kind: "image", src: "survival-mode.webp", title: "02. Versus Mode", desc: "Local asymmetric mechanics inspired by home video game consoles." },
+  { kind: "image", src: "versus-mode.webp", title: "03. Survival Mode", desc: "Traditional gameplay loop featuring horde persistence and sun resource management." },
+  { kind: "video", poster: "trial-mode.webp", src: "trial-mode.webm", title: "04. Trials Mode (AI)", desc: "Real-time simulation powered by strategic autonomous agents." },
 ];
 
 const architectureLayers = [
@@ -90,7 +90,7 @@ const onPointerDown = useCallback((e: React.PointerEvent<HTMLDivElement>) => {
         <header className="mb-10 text-center">
           <span className={projectUi.tag}>Academic Project Showcase</span>
           <Image
-            src={mediaUrl("poob-vs-zombies", "logo.png")}
+            src={mediaUrl("poob-vs-zombies", "logo.webp")}
             alt="POOB vs Zombies"
             width={500}
             height={120}

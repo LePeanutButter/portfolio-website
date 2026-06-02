@@ -43,11 +43,21 @@ const techCards: TechCard[] = [
 ];
 
 const carouselFiles = [
-  ["login.jpg", "Login & authentication"],
-  ["calendarioReservas.jpg", "Reservation calendar"],
-  ["crearReserva.jpg", "Create reservation"],
-  ["gestionReservas.jpg", "Reservation management"],
-  ["insights.jpg", "Analytics dashboard"],
+  ["login.webp", "Login & authentication"],
+  ["gestionUsuario.webp", "User management dashboard"],
+  ["busquedaUsuario.webp", "User search"],
+  ["crearUsuario.webp", "Create new user"],
+  ["editarUsuario.webp", "Edit user profile"],
+  ["gestionarSalon.webp", "Room management dashboard"],
+  ["agregarSalon.webp", "Add new room"],
+  ["editarSalon.webp", "Edit room details"],
+  ["calendarioReservas.webp", "Reservation calendar viewer"],
+  ["gestionReservas.webp", "Reservation management dashboard"],
+  ["crearReserva.webp", "Create new reservation"],
+  ["detalleReserva.webp", "Reservation details view"],
+  ["filtrosReservas.webp", "Reservation filters"],
+  ["reservasPorSalon.webp", "Reservations filtered by room"],
+  ["insights.webp", "Analytics & insights dashboard"],
 ] as const;
 
 const systemSlides: CarouselSlide[] = carouselFiles.map(([file, caption]) => ({
@@ -58,15 +68,15 @@ const systemSlides: CarouselSlide[] = carouselFiles.map(([file, caption]) => ({
 
 const impactSlides: CarouselSlide[] = [
   {
-    src: mediaUrl("elysium", "calendar-comparisson", "before.png"),
+    src: mediaUrl("elysium", "calendar-comparisson", "before.webp"),
     alt: "Legacy calendar",
-    caption: "Phase 1 — Legacy grid calendar (Building B)",
+    caption: "Phase 1 - Legacy grid calendar (Building B)",
     captionTone: "legacy",
   },
   {
-    src: mediaUrl("elysium", "calendar-comparisson", "after.png"),
+    src: mediaUrl("elysium", "calendar-comparisson", "after.webp"),
     alt: "Elysium rework",
-    caption: "Phase 2 — Elysium fluid interface deployed",
+    caption: "Phase 2 - Elysium fluid interface deployed",
     captionTone: "rework",
   },
 ];
@@ -97,7 +107,7 @@ export default function Elysium({ project }: ProjectViewProps) {
       <div className="flex flex-col lg:flex-row">
         <aside className="flex flex-col gap-2 p-6 lg:sticky lg:top-24 lg:h-[calc(100vh-6rem)] lg:w-64">
           <div className="mb-2 flex items-center gap-3">
-            <Image src={mediaUrl("elysium", "logo.png")} alt="Elysium" width={240} height={240} unoptimized />
+            <Image src={mediaUrl("elysium", "logo.webp")} alt="Elysium" width={240} height={240} unoptimized />
           </div>
           {nav.map(([href, label]) => (
             <a
@@ -191,7 +201,7 @@ export default function Elysium({ project }: ProjectViewProps) {
             <br />
             Developed under Scrum methodology and deployed on Microsoft Azure.
             <Image 
-              src={mediaUrl("cvds", "logo.png")} 
+              src={mediaUrl("cvds", "logo.webp")} 
               alt="CVDS" 
               width={80}
               height={80}

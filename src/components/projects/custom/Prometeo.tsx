@@ -171,7 +171,7 @@ export default function Prometeo({ project }: ProjectViewProps) {
           Developed within the Software Development Life Cycle (CVDS) course framework.
 
           <Image 
-            src={mediaUrl("cvds", "logo.png")} 
+            src={mediaUrl("cvds", "logo.webp")} 
             alt="CVDS" 
             width={80}
             height={80}

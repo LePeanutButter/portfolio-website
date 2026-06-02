@@ -143,7 +143,7 @@ export default function Smartrip({ project }: ProjectViewProps) {
                 <p className="font-semibold text-ink">Plan_Transformacion_Digital_SmarTrip_v1.0.pdf</p>
                 <p className="text-sm text-ink-muted">Size: 4.8 MB | Last modified: May 2026 | Status: Corporate approved</p>
               </div>
-              <a href={mediaUrl("smartrip", "digital-transformation.pdf")} target="_blank" rel="noreferrer" className={projectUi.btnPrimary}>
+              <a href={mediaUrl("smartrip", "digital-transformation.pdf")} target="_blank" rel="noreferrer" className={btnBlue}>
                 Download Document
               </a>
             </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import TechBadge from "@/src/components/projects/shared/TechBadge";
 import { projectUi } from "@/src/components/projects/shared/projectUi";
 import type { ProjectViewProps, Contributor } from "@/src/types/projectViews";
@@ -21,25 +21,25 @@ const characters = [
     name: "Ferxxo Papper",
     role: "Agile Skirmisher / Gangster",
     description: "Inspired by Feid's style and rocking signature shades, this green-hot gangster never stops moving. He drops explosive, spicy beats while effortlessly weaving through falling pesticide drops.",
-    imageSrc: mediaUrl("power-garden", "jalapeno.png"),
+    imageSrc: mediaUrl("power-garden", "jalapeno.webp"),
   },
   {
     name: "Flora Bichota",
     role: "Ego-Centric Zoning DPS",
     description: "With stunning blue petals that rival the finest blue hair, her ego is in the sky and her style is unmatched. She struts across the battlefield with absolute confidence, forcing rivals out of safe zones.",
-    imageSrc: mediaUrl("power-garden", "flower.png"),
+    imageSrc: mediaUrl("power-garden", "flower.webp"),
   },
   {
     name: "Lord Appleby",
     role: "High-Society Tactician",
     description: "A classic rich guy who treats the arena like a weekend golf course. Dressed in pristine white clothes and sipping high-end cider, he uses his wealth and influence to claim high ground away from the toxic rain.",
-    imageSrc: mediaUrl("power-garden", "apple.png"),
+    imageSrc: mediaUrl("power-garden", "apple.webp"),
   },
   {
     name: "Sunny Joy",
     role: "Unstoppable Momentum Support",
     description: "Always happy and delightfully chubby, this bubbly sunflower literally lights up the path for survival. Her positive energy keeps her moving constantly, shielding herself from the deadly pesticide rain.",
-    imageSrc: mediaUrl("power-garden", "sunflower.png"),
+    imageSrc: mediaUrl("power-garden", "sunflower.webp"),
   }
 ];
 
@@ -81,7 +81,7 @@ export default function PowerGarden({ project }: ProjectViewProps) {
         <header className="mb-10 text-center">
           <span className={projectUi.tag}>Academic Project Showcase</span>
           <Image
-            src={mediaUrl("power-garden", "logo.png")}
+            src={mediaUrl("power-garden", "logo.webp")}
             alt="Power Garden: Juicy Brawl"
             width={250}
             height={120}
@@ -110,8 +110,8 @@ export default function PowerGarden({ project }: ProjectViewProps) {
             <div className="space-y-6 w-full">
               <div className="overflow-hidden rounded-card border border-border-subtle w-full">
                 <video
-                  src={mediaUrl("power-garden", "gameplay.mp4")}
-                  poster={mediaUrl("power-garden", "gameplay.jpeg")}
+                  src={mediaUrl("power-garden", "gameplay.webm")}
+                  poster={mediaUrl("power-garden", "gameplay.webp")}
                   controls
                   loop
                   preload="metadata"

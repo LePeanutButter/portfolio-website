@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Santiago Botero Garcia - Portfolio Source of Truth
 
-## Getting Started
+This repository serves as the definitive engineering and architectural hub for my digital portfolio. It acts as the anchor point that unifies my comprehensive resumes, automated workspace configurations, core academic milestones, and standalone technical codebases into a clean, searchable index.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table of Contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Background](https://www.google.com/search?q=%23background)
+- [Technical Stack](https://www.google.com/search?q=%23technical-stack)
+- [Maintainers](https://www.google.com/search?q=%23maintainers)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Background
 
-## Learn More
+As a Systems Engineering student and full-stack technologist, my engineering workflow frequently spans diverse, decoupled environments: robust backend services (`Java`/`Spring Boot`), flexible analytical scripts (`Python`/`FastAPI`), automated continuous integration pipes (`Docker`/`Terraform`), and interactive frontend applications (`React`/`Next.js`).
 
-To learn more about Next.js, take a look at the following resources:
+The goal of this repository is to give technical recruiters, system architects, and open-source collaborators an immediate, transparent window into my technical rigor, code architecture habits, and development lifecycle patterns without forcing them to dig through individual nested configuration files.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Technical Stack
 
-## Deploy on Vercel
+### Programming Languages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`Java` • `Python` • `TypeScript` • `JavaScript` • `C#` • `Kotlin` • `SQL` • `Bash` • `PowerShell` • `C` • `ARM & MARIE Assembly` • `HDL`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Engineering Competencies
+
+- **Backend Frameworks:** Spring Boot (Security), Django, FastAPI, ASP.NET Core
+- **Frontend Engineering:** React.js, Next.js, SvelteKit, Custom Hooks, D3.js, Chart.js, Three.js, Figma-to-Web, Responsive Layouts
+- **Data Management:** PostgreSQL, MongoDB Atlas, Oracle SQL, Microsoft SQL Server, MariaDB, Conceptual/Physical Data Modeling, Triggers, RBAC, Audit Logs
+- **DevOps & Infrastructure:** AWS, Microsoft Azure, Docker, Terraform, GitHub Actions pipelines, Azure DevOps, SonarQube/SonarCloud analysis, JaCoCo, Trivy
+- **Foundational Systems:** Threat Modeling (STRIDE), Bash/PowerShell scripting automation, Network design (Cisco Packet Tracer, PCAP Wireshark Analysis, VLANs, EIGRP), Data Structures & Algorithms
+
+---
+
+## Maintainers
+
+**Santiago Botero Garcia**
+
+- Bogota, Colombia
+- GitHub: [@LePeanutButter](https://www.google.com/search?q=https://github.com/LePeanutButter)
+- LinkedIn: [linkedin.com/in/santiago-botero-garcia-86991335b](https://www.google.com/search?q=https://linkedin.com/in/santiago-botero-garcia-86991335b/)

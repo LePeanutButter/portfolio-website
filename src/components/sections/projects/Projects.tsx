@@ -7,7 +7,7 @@ import ProjectTabs, { FilterCategory } from "@/src/components/sections/projects/
 import SectionHeading from "@/src/components/ui/SectionHeading";
 
 export default function Projects() {
-  const [activeCategory, setActiveCategory] = useState<FilterCategory>("all");
+  const [activeCategory, setActiveCategory] = useState<FilterCategory>("academic");
 
   return (
     <section id="projects" className="mx-auto max-w-content px-6 py-20 sm:px-8">

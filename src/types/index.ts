@@ -88,9 +88,7 @@ export interface ProjectCase {
   kind: ProjectCaseKind;
   actionLabel: string;
   dateRange?: string;
-  /** Relative path under /media/ (e.g. "smartrip/logo.png") when no StaticImageData thumbnail. */
-  coverImage?: string;
-  thumbnail: StaticImageData | null;
+  thumbnail?: StaticImageData;
   summary: string;
   narrative: string[];
   technologies: string[];
@@ -100,12 +98,15 @@ export interface ProjectCase {
   featured?: boolean;
 }
 
+export interface SkillItem {
+  name: string;
+  image: StaticImageData | string;
+}
+
 export interface SkillGroup {
   domain: SkillDomain;
   title: string;
-  description: string;
-  items: string[];
-  evidence: string[];
+  items: SkillItem[];
 }
 
 export interface AuxiliaryRepository {
