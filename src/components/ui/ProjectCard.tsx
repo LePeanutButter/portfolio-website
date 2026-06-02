@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { ProjectCase } from "@/src/types";
-import { mediaUrl } from "@/src/lib/assets";
 
 interface ProjectCardProps {
   project: ProjectCase;
@@ -19,8 +18,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
   const previewSrc = project.thumbnail
     ? project.thumbnail
-    : project.coverImage
-      ? mediaUrl(project.coverImage)
       : `https://placehold.co/800x550/e5e7eb/6b7280?text=${encodeURIComponent(project.title)}`;
 
   return (
